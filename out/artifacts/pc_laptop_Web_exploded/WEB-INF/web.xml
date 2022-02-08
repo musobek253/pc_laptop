@@ -7,8 +7,25 @@
         <servlet-name>Kompyuter</servlet-name>
         <servlet-class>KopyuterServelet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Laptop</servlet-name>
+        <servlet-class>LaptopServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Printer</servlet-name>
+        <servlet-class>PrinterServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Kompyuter</servlet-name>
         <url-pattern>/pc</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Laptop</servlet-name>
+        <url-pattern>/laptop</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Printer</servlet-name>
+        <url-pattern>/printer</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
