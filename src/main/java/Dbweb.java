@@ -54,9 +54,9 @@ public class Dbweb {
 
     public List<Laptop> selectAllLaptop() {
         List<Laptop> laptops = new ArrayList<>();
-        Connection connection = null;
+
         try {
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+             Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(listLaptop);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
@@ -74,9 +74,8 @@ public class Dbweb {
 
     public List<Printer> selectAllPrinter() {
         List<Printer> printers = new ArrayList<>();
-        Connection connection = null;
         try {
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+            Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(listPrinter);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
